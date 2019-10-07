@@ -11,6 +11,7 @@ namespace TweetDemo
 		static void Main(string[] args)
 		{
 			Tweet tweet = new Tweet();
+			Tweet tweet2 = new Tweet();
 		}
 	}
 }
