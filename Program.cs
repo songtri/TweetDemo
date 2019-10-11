@@ -3,6 +3,8 @@
 // Wook Song 301047817
 // Thuan An Tran 300986225
 
+using System;
+
 namespace TweetDemo
 {
 	class Program
@@ -10,8 +12,14 @@ namespace TweetDemo
 		static void Main(string[] args)
 		{
 			//TweetManager.Initialize();
+			Console.WriteLine("=============================================");
+			Console.WriteLine("Testing TweetManager.ShowAll()");
+			Console.WriteLine("=============================================\n");
 			TweetManager.ShowAll();
-			//TweetManager.ShowAll("weTHENortH");
+			Console.WriteLine("=============================================");
+			Console.WriteLine("Testing TweetManager.ShowAll(\"weTHENortH\")");
+			Console.WriteLine("=============================================\n");
+			TweetManager.ShowAll("weTHENortH");
 		}
 	}
 }
