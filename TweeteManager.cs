@@ -13,15 +13,25 @@ namespace TweetDemo
 		{
 			TWEETS = new List<Tweet>();
 			FILENAME = "Assignment_02_TweetFile.txt";
-			using (StreamReader reader = new StreamReader(FILENAME))
+			try
 			{
-				while (!reader.EndOfStream)
+				using (StreamReader reader = new StreamReader(FILENAME))
 				{
-					string line = reader.ReadLine();
-					Tweet tweet = Tweet.Parse(line);
-					if (tweet != null)
-						TWEETS.Add(tweet);
+					while (!reader.EndOfStream)
+					{
+						string line = reader.ReadLine();
+						Tweet tweet = Tweet.Parse(line);
+						if (tweet != null)
+							TWEETS.Add(tweet);
+					}
 				}
+			}
+			catch(Exception e)
+			{
+				Console.WriteLine("Exception Occured!");
+				Console.WriteLine(e.Message);
+				Console.WriteLine("Calling TweetManager.Initialize..");
+				Initialize();
 			}
 		}
 
