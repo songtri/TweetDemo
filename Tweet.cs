@@ -37,13 +37,12 @@ namespace TweetDemo
 			if (Body.Length > CharacterCountToShowInOneLine)
 			{
 				int numLines = (int)Math.Ceiling((double)Body.Length / CharacterCountToShowInOneLine);
-				body += $"{Body.Substring(0, CharacterCountToShowInOneLine)}";
-				for (int i = 1; i < numLines; ++i)
+				for (int i = 0; i < numLines; ++i)
 				{
 					int lengthToSub = CharacterCountToShowInOneLine;
 					if (Body.Length - i * CharacterCountToShowInOneLine < CharacterCountToShowInOneLine)
 						lengthToSub = Body.Length - i * CharacterCountToShowInOneLine;
-					body += $"\n{Body.Substring(i * CharacterCountToShowInOneLine, lengthToSub)}";
+					body += $"{Body.Substring(i * CharacterCountToShowInOneLine, lengthToSub)}{(i == numLines - 1 ? "" : "\n")}";
 				}
 			}
 			else
