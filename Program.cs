@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// Group Information:
+// Michael Magtibay 301029090
+// Wook Song 301047817
+// Thuan An Tran 300986225
 
 namespace TweetDemo
 {
@@ -10,6 +9,9 @@ namespace TweetDemo
 	{
 		static void Main(string[] args)
 		{
+			//TweetManager.Initialize();
+			TweetManager.ShowAll();
+			//TweetManager.ShowAll("weTHENortH");
 		}
 	}
 }
